@@ -132,11 +132,12 @@ var TMInputText = React.createClass({
         if(errorStatus) {
             this.util.addClass(rootNode, 'error');
             this.util.removeClass(errorGroupNodes, 'hide');
-            errorMessageNodes.innerHTML = errorStatus;
         }else{
             this.util.removeClass(rootNode, 'error');
             this.util.addClass(errorGroupNodes, 'hide');
         }
+
+        this.setErrorMessage(this.getError(errorStatus));
 
         this.setState({
             errorStatus: errorStatus
