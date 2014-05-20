@@ -79,6 +79,15 @@ gulp.task('html', function () {
         .pipe(connect.reload());
 });
 
+// images
+gulp.task('trend-images', function () {
+    return gulp.src([
+            'app/bower_components/trend-branding-styleguide/dist/3.0/img/',
+        ])
+        .pipe(gulp.dest('dist/img'))
+        .pipe(connect.reload());
+});
+
 gulp.task('jsdoc', function(){
     return gulp.src([
             'app/' + npmConfig.name + '.js',
@@ -162,6 +171,7 @@ gulp.task('build', [
 
 gulp.task('dev', [
     'bower',
+    'trend-images',
     'scripts',
     'html',
     'connect',

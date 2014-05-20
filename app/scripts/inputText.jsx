@@ -124,29 +124,18 @@ var TMInputText = React.createClass({
 
     handleError: function(e, errorStatus) {
         console.log('handleError = ', e);
+
         var rootNode = this.getDOMNode(),
-            errorNodes = rootNode.querySelectorAll('[class*=help-]');
+            errorMessageNodes = this.refs.errorMessage.getDOMNode(),
+            errorGroupNodes = this.refs.errorGroup.getDOMNode();
 
         if(errorStatus) {
             this.util.addClass(rootNode, 'error');
+            this.util.removeClass(errorGroupNodes, 'hide');
+            errorMessageNodes.innerHTML = errorStatus;
         }else{
             this.util.removeClass(rootNode, 'error');
-        }
-
-        for(var i = 0; i < errorNodes.length; i++) {
-            var item = errorNodes[i],
-                msg = '';
-
-            if(errorStatus) {
-                this.util.removeClass(item, 'hide');
-                if(this.util.hasClass(item, 'help-inline')) {
-                    msg = this.getError(errorStatus);
-                }
-            }else{
-                this.util.addClass(item, 'hide');
-            }
-
-            item.innerHTML = msg;
+            this.util.addClass(errorGroupNodes, 'hide');
         }
 
         this.setState({
@@ -217,18 +206,16 @@ var TMInputText = React.createClass({
     },
 
     renderLabel: function() {
-        return this.props.label ? <label className="control-label" htmlFor={this.props.id} ref='label'>{this.props.label}</label> : null;
-    },
-
-    renderErrorArrow: function() {
-        return (
-            <div className="help-arrow hide"></div>
-        );
+        return this.props.label ? <label className="form-label" htmlFor={this.props.id} ref='label'>{this.props.label}</label> : null;
     },
 
     renderErrorMessage: function() {
         return (
-            <div className="help-inline hide" data-error ref="errorMessage"></div>
+            <div className="form-error hide" ref="errorGroup">
+                <span className="form-arrow"></span>
+                <div className="form-error-message" data-error ref="errorMessage">
+                </div>
+            </div>
         );
     },
 
@@ -241,7 +228,6 @@ var TMInputText = React.createClass({
                 {this.renderLabel()}
                 <div className="controls">
                     {this.renderInput()}
-                    {this.renderErrorArrow()}
                     {this.renderErrorMessage()}
                 </div>
             </div>
