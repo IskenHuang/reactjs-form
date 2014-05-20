@@ -4,7 +4,7 @@
 .tmp
 sync.sh
 dist
-
+app/bower_components
 
 # -----------------------------------
 # dropbox / System
