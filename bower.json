@@ -1,0 +1,14 @@
+{
+  "name": "reactjs-form",
+  "version": "0.0.0",
+  "dependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "devDependencies": {
+    "react": "~0.10.0",
+    "trend-branding-styleguide": "https://gitlab.tw.trendnet.org/randy_lien/trend-branding-styleguide/repository/archive.zip"
+  }
+}

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Trend Micro Styleguide</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <script src="public/angular.min.js"></script>
+    <script src="public/bootstrap-gh-pages/ui-bootstrap-tpls-0.4.0.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+    .trendmicro{
+        width: 625px;
+        height: 200px;
+        margin: 30px auto;
+        padding: 20px;
+        z-index: -1;
+        background-color:#fff;
+    }
+    .trendmicro .desc{
+        color:#f5f5f5;
+        text-shadow:1px 1px 0px #999;
+        position:absolute;
+        font-family: 'Oswald', Arial, sans-serif;
+        font-size:28px;
+        width:625px;
+        margin-top: -10px;
+        text-align:right;
+    }
+    .round {
+        margin: 0px;
+        border-radius:100px;
+        width:200px; height:200px;
+        border:0px solid #A90007;
+        /*background: #a31300;*/
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a00009), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #a00009 0%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
+        /*
+        background: -moz-linear-gradient(top, #a31300 0%, #b23718 38%, #d14c2b 53%, #f2b7b0 75%, #f4cdc8 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a31300), color-stop(38%,#b23718), color-stop(53%,#d14c2b), color-stop(75%,#f2b7b0), color-stop(100%,#f4cdc8));
+        background: -webkit-linear-gradient(top, #a31300 0%,#b23718 38%,#d14c2b 53%,#f2b7b0 75%,#f4cdc8 100%);
+        background: -ms-linear-gradient(top, #a31300 0%,#b23718 38%,#d14c2b 53%,#f2b7b0 75%,#f4cdc8 100%);
+        background: linear-gradient(top, #a31300 0%,#b23718 38%,#d14c2b 53%,#f2b7b0 75%,#f4cdc8 100%);
+        */
+        float:left;
+    }
+    .gloss {
+        width: 153px;
+        height: 153px;
+        -webkit-transform: scale(0.9, 0.65);
+        border-radius: 200px;
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0.45) 40%,rgba(255, 255, 255, 0) 62%);
+        position: absolute;
+        margin: -26px 0 0 24px;
+        z-index: 1;
+    }
+    .hook-outer{
+        -webkit-transform:rotate(142deg);
+        width:200px;
+        height:200px;
+    }
+    .hook{
+        width:200px;
+        height:200px;
+        border-radius:100px;
+        -webkit-transform: scale(1, 0.54);
+        position:absolute;
+        background-color:#fff;
+    }
+    .hook-s{
+        width: 173px;
+        height: 180px;
+        border-radius: 95px 109px 93px 108px;
+        -webkit-transform: scale(1, 0.52);
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,red), color-stop(100%,#A00009));
+        background: -webkit-linear-gradient(-142deg, red 0%,#A00009 100%);
+        position: absolute;
+        margin-top: 19px;
+        margin-left: 14px;
+    }
+    .t{
+        font-family: Times New Roman;
+        color: white;
+        font-size: 122px;
+        margin: -167px 0 0 21px;
+        position: absolute;
+        -webkit-transform: scale(1.4, 1);
+        font-style: italic;
+        font-weight: bold;
+        width: 71px;
+        height: 69px;
+        overflow: hidden;
+    }
+    .t2 {
+        font-family: Times New Roman;
+        color: white;
+        font-size: 190px;
+        margin: -98px 0 0 9px;
+        position: absolute;
+        font-style: italic;
+        width: 42px;
+        height: 86px;
+        overflow: hidden;
+        line-height: 4px;
+        font-weight: bold;
+        -webkit-transform: rotate(-4deg);
+    }
+    .gloss-bottom{
+        width: 200px;
+        height: 200px;
+        background: -webkit-linear-gradient(top,rgba(255, 255, 255, 0) 50%,rgba(243, 212, 165, 0.8) 100%);
+        position: absolute;
+        margin: -200px 0 0 0;
+        border-bottom-right-radius: 380px 370px;
+        border-bottom-left-radius: 380px 370px;
+        z-index: 1;
+    }
+
+    .wording-trend {
+        font-size: 97px;
+        font-weight: bold;
+        float:left;
+        margin: 19px 0px 0px 28px;
+        letter-spacing: 7px;
+    }
+    .wording-micro {
+        font-size: 53px;
+        font-weight: bold;
+
+        margin: 0px 0px 0px 35px;
+        line-height: 24px;
+        letter-spacing: 42px;
+    }
+    .trademark{
+        float: left;
+        font-size: 29px;
+        margin: -55px 0 0 372px;
+    }
+
+    .round-shadow{
+        width: 148px;
+        height: 42px;
+        border-radius: 200px;
+        -webkit-transform: scale(1, 0.58);
+        background-color: transparent;
+        position: absolute;
+        box-shadow: 8px 165px 70px #666;
+        margin-top: 74px;
+        margin-left: 20px;
+        z-index: 0;
+    }
+
+    /****************************************************************
+        Size: 32 * 32px
+    ****************************************************************/
+    .trendmicro.size32 {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+    }
+    .trendmicro.size32 .desc{
+        font-size: 9px;
+        width:110px;
+        margin:-7px 0 0 3px;
+    }
+    .trendmicro.size32 .round {
+        border-radius:32px;
+        width:32px;
+        height:32px;
+    }
+    .trendmicro.size32 .gloss {
+        width: 24px;
+        height: 24px;
+        border-radius: 16px;
+        margin: -4px 0 0 4px;
+    }
+    .trendmicro.size32 .hook-outer{
+        width:32px;
+        height:32px;
+    }
+    .trendmicro.size32 .hook{
+        width:32px;
+        height:32px;
+        border-radius:32px;
+    }
+    .trendmicro.size32 .hook-s{
+        width: 28px;
+        height: 29px;
+        border-radius: 15px 18px 15px 18px;
+        margin-top: 3px;
+        margin-left: 2.3px;
+    }
+    .trendmicro.size32 .t{
+        font-size: 19px;
+        margin: -27px 0 0 3.5px;
+        width: 7.5px;
+        height: 10.5px;
+    }
+    .trendmicro.size32 .t2 {
+        font-size: 31.5px;
+        margin: -17.5px 0 0 1.5px;
+        width: 7px;
+        height: 17px;
+        line-height: 2px;
+    }
+    .trendmicro.size32 .gloss-bottom{
+        width: 32px;
+        height: 32px;
+        margin: -32px 0 0 0;
+        border-bottom-right-radius: 63px 62px;
+        border-bottom-left-radius: 63px 62px;
+    }
+    .trendmicro.size32 .wording-trend {
+        font-size: 16px;
+        margin: 2.5px 0px 0px 4.5px;
+        letter-spacing: 1px;
+    }
+    .trendmicro.size32 .wording-micro {
+        font-size: 12px;
+        margin: 0px 0px 0px 6px;
+        line-height: 3.5px;
+        letter-spacing: 4.7px;
+    }
+    .trendmicro.size32 .trademark{
+        font-size: 10%;
+        margin: -9px 0 0 62px;
+    }
+
+    .trendmicro.size32 .round-shadow{
+        width: 25px;
+        height: 6px;
+        border-radius: 22px;
+        box-shadow: 1px 26px 14px #666;
+        margin-top: 11px;
+        margin-left: 3px;
+    }
+
+    /****************************************************************
+        Size: 64 * 64px
+    ****************************************************************/
+    .trendmicro.size64 {
+        width: 210px;
+        height: 70px;
+        padding: 10px;
+    }
+    .trendmicro.size64 .desc{
+        width:202px;
+        margin:-7px 0 0 3px;
+        font-size: 12px;
+    }
+    .trendmicro.size64 .round {
+        border-radius:64px;
+        width:64px;
+        height:64px;
+    }
+    .trendmicro.size64 .gloss {
+        width: 48px;
+        height: 48px;
+        border-radius: 64px;
+        margin: -8px 0 0 8px;
+    }
+    .trendmicro.size64 .hook-outer{
+        width:64px;
+        height:64px;
+    }
+    .trendmicro.size64 .hook{
+        width:64px;
+        height:64px;
+        border-radius:32px;
+    }
+    .trendmicro.size64 .hook-s{
+        width: 55px;
+        height: 58px;
+        border-radius: 30px 36px 30px 36px;
+        margin-top: 6px;
+        margin-left: 4.5px;
+    }
+    .trendmicro.size64 .t{
+        font-size: 38px;
+        margin: -54px 0 0 7px;
+        width: 15px;
+        height: 21px;
+    }
+    .trendmicro.size64 .t2 {
+        font-size: 63px;
+        margin: -33px 0 0 3px;
+        width: 14px;
+        height: 28px;
+        line-height: 4px;
+    }
+    .trendmicro.size64 .gloss-bottom{
+        width: 64px;
+        height: 64px;
+        margin: -64px 0 0 0;
+        border-bottom-right-radius: 126px 123px;
+        border-bottom-left-radius: 127px 123px;
+    }
+    .trendmicro.size64 .wording-trend {
+        font-size: 32px;
+        margin: 5px 0px 0px 9px;
+        letter-spacing: 2px;
+    }
+    .trendmicro.size64 .wording-micro {
+        font-size: 18px;
+        margin: 0px 0px 0px 12px;
+        line-height: 7px;
+        letter-spacing: 13px;
+    }
+    .trendmicro.size64 .trademark{
+        font-size: 10px;
+        margin: -18px 0 0 124px;
+    }
+
+    .trendmicro.size64 .round-shadow{
+        width: 50px;
+        height: 12px;
+        border-radius: 43px;
+        box-shadow: 2px 52px 28px #666;
+        margin-top: 22px;
+        margin-left: 6px;
+    }
+
+    /****************************************************************
+        Size: 128 * 128px
+    ****************************************************************/
+    .trendmicro.size128 {
+        width: 404px;
+        height: 140px;
+        padding: 20px;
+    }
+    .trendmicro.size128 .desc{
+        font-size: 17px;
+        width:404px;
+        margin:-7px 0 0 3px;
+    }
+    .trendmicro.size128 .round {
+        border-radius:128px;
+        width:128px;
+        height:128px;
+    }
+    .trendmicro.size128 .gloss {
+        width: 96px;
+        height: 96px;
+        border-radius: 128px;
+        margin: -16px 0 0 16px;
+    }
+    .trendmicro.size128 .hook-outer{
+        width:128px;
+        height:128px;
+    }
+    .trendmicro.size128 .hook{
+        width:128px;
+        height:128px;
+        border-radius:64px;
+    }
+    .trendmicro.size128 .hook-s{
+        width: 110px;
+        height: 116px;
+        border-radius: 60px 72px 60px 72px;
+        margin-top: 12px;
+        margin-left: 9px;
+    }
+    .trendmicro.size128 .t{
+        font-size: 72px;
+        margin: -112px 0 0 12px;
+        width: 30px;
+        height: 51px;
+    }
+    .trendmicro.size128 .t2 {
+        font-size: 126px;
+        margin: -66px 0 0 6px;
+        width: 28px;
+        height: 56px;
+        line-height: 8px;
+    }
+    .trendmicro.size128 .gloss-bottom{
+        width: 128px;
+        height: 128px;
+        margin: -128px 0 0 0;
+        border-bottom-right-radius: 252px 246px;
+        border-bottom-left-radius: 254px 246px;
+    }
+    .trendmicro.size128 .wording-trend {
+        font-size: 64px;
+        margin: 10px 0px 0px 18px;
+        letter-spacing: 4px;
+    }
+    .trendmicro.size128 .wording-micro {
+        font-size: 36px;
+        margin: 0px 0px 0px 24px;
+        line-height: 14px;
+        letter-spacing: 26px;
+    }
+    .trendmicro.size128 .trademark{
+        font-size: 20px;
+        margin: -36px 0 0 248px;
+    }
+
+    .trendmicro.size128 .round-shadow{
+        width: 100px;
+        height: 24px;
+        border-radius: 86px;
+        box-shadow: 4px 104px 56px #666;
+        margin-top: 44px;
+        margin-left: 12px;
+    }
+
+
+    </style>
+    <script>
+        function TypeaheadCtrl($scope) {
+            $scope.selected = undefined;
+            $scope.items = [
+                'typography'
+            ];
+        }
+    </script>
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar kss-fixed">
+        <header class="kss-header">
+          <h1 class="kss-doc-title"><a href="./index.html">Trend Micro Styleguide</a></h1>
+        </header>
+        <nav class="kss-nav">
+          <ul class="kss-menu" data-kss-ref="0">
+            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Typography</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Buttons</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Forms</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Header &amp; Footer</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Modals</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Dropdown</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Popover (Tooltips)</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Tab</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Slider</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-10.html"><span class="kss-ref">10</span><span class="kss-name">Password Strength</span></a></li>
+            
+          </ul>
+          
+          
+        </nav>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          <section id="section-0" class="kss-section kss-overview">
+            <h1>Welcome to Trend Micro Styleguide</h1>
+<div style="background: transparent url(public/banner.png) no-repeat center center; background-size: cover; height: 160px;"></div>
+
+<div class="trendmicro size128" style="display:none;">
+  <div class="round">
+    <div class="gloss"></div>
+    <div class="hook-outer">
+      <div class="hook"></div>
+      <div class="hook-s"></div>
+    </div>
+    <div class="t">t</div>
+    <div class="t2">c</div>
+    <div class="gloss-bottom"></div>
+  </div>
+  <div class="round-shadow"></div>
+  <div class="wording-trend">TREND</div>
+  <div class="wording-micro">MICRO</div>
+  <div class="trademark">™</div>
+</div>
+
+<p>Trend Micro Branding Styleguide is used for all of company relative products.
+It is good for UI Designers, Visual Designers, Front End Developers and all Trenders.
+You could reference this document to help you to think about your design or leverage the existing UI elements without creating everything from scratch.
+
+</p>
+<h1>How to use</h1>
+<h2>Use CSS</h2>
+<ol>
+<li>You could use <code>&lt;link&gt;</code> tag from HTML document or <code>@import</code> CSS files.</li>
+<li>You could find the output css file under <code>dist</code> folder.</li>
+</ol>
+<h2>Use Less (Preprocessor)</h2>
+<ol>
+<li>You should have a node.js environment. (<a href="http://www.nodejs.org">http://www.nodejs.org</a>)</li>
+<li>You should install bower, running this command <code>npm install -g bower</code> after installing node.js</li>
+<li>Please run <code>bower install</code> to install relative dependencies like lesshat.</li>
+<li>Right now you could use import to use any packages you want to use.</li>
+<li>The default bower installation path would be <code>bower_components</code>.</li>
+</ol>
+<h1>How to contribute</h1>
+<p>Visit <a href="https://gitlab.tw.trendnet.org/randy_lien/trend-branding-styleguide">Trend Branding StyleGuide</a>
+
+</p>
+<h2>For Developers</h2>
+<h1>Coding Style</h1>
+<ol>
+<li>Use soft-tabs with a <em>4 space indent</em>.</li>
+<li><em>Put spaces after : in property declarations</em>.</li>
+<li><em>Put spaces before { in rule declarations</em>.</li>
+<li>Use <em>hex color codes</em> #000 unless using <em>rgba</em>.</li>
+<li>Use <em>// for comment blocks</em> (instead of /<em> </em>/).</li>
+<li>Document styles with <em>KSS</em>.</li>
+<li>Please reference to CSS guideline to know more details.</li>
+</ol>
+<pre><code>// This is a good example!
+.styleguide-format {
+  border: 1px solid #0f0;
+  color: #000;
+  background: rgba(0,0,0,0.5);
+}</code></pre>
+<h1>Specification</h1>
+<p>The text from here on is mostly taken from the <a href="https://github.com/kneath/kss/blob/master/SPEC.md">KSS specification</a>.
+
+</p>
+<p>Unlike TomDoc, not every CSS rule should be documented. You should document a rule declaration when the rule can accurately describe a visual UI element in the styleguide. Each element should have one documentation block describing that particular UI element&apos;s various states.
+
+</p>
+<p>KSS documentation is hierarchical in nature — any documentation blocks at any point within the styleguide hierarchy apply to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
+
+</p>
+<h2>Format</h2>
+<p>The basic format for KSS documentation can be best explained in an example:
+
+</p>
+<pre><code class="css">/*
+A button suitable for giving stars to someone.
+
+:hover             - Subtle hover highlight.
+.stars-given       - A highlight indicating you&apos;ve already given a star.
+.stars-given:hover - Subtle hover highlight on top of stars-given styling.
+.disabled          - Dims the button to indicate it cannot be used.
+
+Styleguide 2.1.3.
+*/
+a.button.star{
+  ...
+}
+a.button.star.stars-given{
+  ...
+}
+a.button.star.disabled{
+  ...
+}</code></pre>
+<p>When using a preprocessor that supports the functionality, use <code>//</code> to prefix your comment sections (SCSS example):
+
+</p>
+<pre><code class="less">// A button suitable for giving stars to someone.
+//
+// :hover             - Subtle hover highlight.
+// .stars-given       - A highlight indicating you&apos;ve already given a star.
+// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 2.1.3.
+a.button.star{
+  ...
+  &amp;.star-given{
+    ...
+  }
+  &amp;.disabled{
+    ...
+  }
+}</code></pre>
+<p>Each KSS documentation block consists of three parts: a description of what the element does or looks like, a list of modifier classes or pseudo-classes and how they modify the element, and a reference to the element&apos;s position in the styleguide.
+
+</p>
+<h2>Style Documentation</h2>
+<p>The description should be plain sentences of what the CSS rule or hierarchy does and looks like. A good description gives guidance toward the application of elements the CSS rules style.
+
+</p>
+<p>CSS rules that depend on specific HTML structures should describe those structures using <code>&lt;element#id.class:pseudo&gt;</code> notation. For example:
+
+</p>
+<pre><code class="less">// A feed of activity items. Within each &lt;section.feed&gt;, there should be many
+// &lt;article&gt;s which are the  feed items.</code></pre>
+<p>To describe the status of a set of rules, you should prefix the description with <strong>Experimental</strong> or <strong>Deprecated</strong>.
+
+</p>
+<p><strong>Experimental</strong> indicates CSS rules that apply to experimental styling. This can be useful when testing out new designs before they launch (staff only), alternative layouts in A/B tests, or beta features.
+
+</p>
+<pre><code class="less">// Experimental: An alternative signup button styling used in AB Test #195.</code></pre>
+<p><strong>Deprecated</strong> indicates that the rule is slated for removal. Rules that are deprecated should not be used in future development. This description should explain what developers should do when encountering this style.
+
+</p>
+<pre><code class="less">// Deprecated: Styling for legacy wikis. We&apos;ll drop support for these wikis on
+// July 13, 2007.</code></pre>
+<h2>The modifiers section</h2>
+<p>If the UI element you are documenting has multiple states or styles depending on added classes or pseudo-classes, you should document them in the modifiers section.
+
+</p>
+<pre><code class="less">// :hover             - Subtle hover highlight.
+// .stars-given       - A highlight indicating you&apos;ve already given a star.
+// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.</code></pre>
+<h2>The styleguide section</h2>
+<p>If the UI element you are documenting has an example in the styleguide, you should reference it using the &quot;Styleguide [ref]&quot; syntax.
+
+</p>
+<pre><code class="less">// Styleguide 2.1.3.</code></pre>
+<p>References should be integer sections separated by periods. Each period denotes a hierarchy of the styleguide. Styleguide references can point to entire sections, a portion of the section, or a specific example.
+
+</p>
+<p>If there is no example, then you must note that there is no reference.
+
+</p>
+<pre><code class="less">// No styleguide reference.</code></pre>
+<h2>The markup section</h2>
+<p><em>Note: This section is unofficial, and only implemented in <code>kss-node</code>.</em>
+
+</p>
+<p>If you wish to include example HTML for the UI element you are documenting, you should include an additional paragraph with sample markup and prefix it with <code>Markup:</code>. You should also note the placement of modifier classes with <code>{$modifiers}</code>, like so:
+
+</p>
+<pre><code class="less">// Buttons
+//
+// :hover - Highlight the button when hovering.
+//
+// Markup:
+// &lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;Link&lt;/a&gt;
+// &lt;button class=&quot;button {$modifiers}&quot;&gt;Button&lt;/button&gt;
+//
+// Styleguide 2.1.3.</code></pre>
+<p>If you&apos;re using the <code>kss-node</code> module or CLI, make sure not to include any double line-breaks, as only the first paragraph prefixed with <code>Markup:</code> will be included.
+
+</p>
+<h1>Preprocessor Helper Documentation</h1>
+<p>If you use a CSS preprocessor like SCSS or LESS, you should document all helper functions (sometimes called mixins).
+
+</p>
+<pre><code class="less">// Creates a linear gradient background, from top to bottom.
+//
+// $start - The color hex at the top.
+// $end   - The color hex at the bottom.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+@mixin gradient($start, $end){
+  ...
+}</code></pre>
+<p>Each documentation block should have a description section, parameters section, and compatibility section.  The description section follows the same guidelines as style documentation.
+
+</p>
+<h2>The parameters section</h2>
+<p>If the mixin takes parameters, you should document each parameter and describe what sort of input it expects (hex, number, etc).
+
+</p>
+<pre><code class="less">// $start - The color hex at the top.
+// $end   - The color hex at the bottom.</code></pre>
+<h2>The compatibility section</h2>
+<p>You must list out what browsers this helper method is compatible in.
+
+</p>
+<pre><code class="less">// Compatible in IE6+, Firefox 2+, Safari 4+.</code></pre>
+<p>If you do not know the compatibility, you should state as such.
+
+</p>
+<pre><code class="less">// Compatibility untested.</code></pre>
+<h1>Styleguide</h1>
+<p>In order to fully take advantage of KSS, you should create a living styleguide. A living styleguide is a <em>part of your application</em> and should include all of the CSS, Javascript, and layout the rest of your application does.
+
+</p>
+<p>To get started quickly use the CLI tool, which supports custom templates too. If you&apos;re feeling game you can (and should) build it up from scratch using the module&apos;s API.
+
+</p>
+<p>Overall, keep in mind that styleguides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.
+
+</p>
+<h2>Organization</h2>
+<p>The styleguide should be organized by numbered sections. These sections can go as deep as you like. Every element should have a numbered section to refer to. For example:
+
+</p>
+<pre><code>1. Buttons
+  1.1 Form Buttons
+    1.1.1 Generic form button
+    1.1.2 Special form button
+  1.2 Social buttons
+  1.3 Miscelaneous buttons
+2. Form elements
+  2.1 Text fields
+  2.2 Radio and checkboxes
+3. Text styling
+4. Tables
+  4.1 Number tables
+  4.2 Diagram tables</code></pre>
+<p>The goal here is to create an organizational structure that is flexible, but  rigid enough to be machine processed and referenced inside of documentation.
+</p>
+
+          </section>
+          
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap-affix.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <!--[if gt IE 8]><!-->
+    <!-- <script src="public/rainbow.min.js"></script> -->
+    <!--<![endif]-->
+    <script src="public/prettify.js"></script>
+    <script src="public/main.js"></script>
+  </body>
+</html>

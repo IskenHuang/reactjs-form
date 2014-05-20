@@ -1,0 +1,162 @@
+@import '../../../bower_components/bootstrap-3/less/bootstrap';
+// If you don't need to support responsive feature, please comment this
+@import '../../../bower_components/bootstrap-3/less/responsive-utilities';
+// @import "../../components/font-awesome/less/font-awesome";
+@import '../../../bower_components/lesshat/build/lesshat';
+.text-overflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@import 'normalize-addon';
+@import 'variables';
+// Typography
+//
+// The basic typography in all Trend Micro products<br>
+// For internationalization purpose, you should add `lang` attribute on your html tag to apply differnt locale font settings.<br>
+// For example, `<html lang="ja-JP">`
+//
+// Styleguide 1.
+@import "typography";
+// Forms
+//
+// <p>Individual form controls receive styling, but without any required base class on the `<form>` or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+//
+// Styleguide 3.
+@import "form";
+// Header & Footer
+//
+// <p>Here will contain most of the header, footer, landing page layout and relative basic elements.</p>
+// <p>All of Trend Micro products should contain this elements on the UI.</p>
+//
+// Styleguide 4.
+@import "branding";
+@import "color";
+@import "trend-layout";
+@import "layout";
+// Buttons
+//
+// Reusable button elements in products.
+//
+// Styleguide 2.
+@import "buttons";
+// Modals
+//
+// The lightbox form of a dialog box can display all sorts of information in a customizable way.<br>
+// The black background behind the lightbox should dim the entire page and have an opacity of 60%.<br>
+// The lightbox must include a “close” button, even if only in the top right corner.<br>
+// <p>This UI need to apply <a target="_blank" href="js/bootstrap-modal.js">bootstrap-modal.js</a></p>
+// <div class="kss-markup">
+// Display a modal with id <span style="color: #ee5e64;">myModal</span> with a single line of JavaScript:
+// 	<pre class="prettyprint"><code data-language="html">
+//$('#myModal').modal(options);
+// 	</code></pre>
+// </div>
+//
+// Styleguide 5.
+@import "modals";
+// Dropdown
+//
+// <p>Toggleable, contextual menu for displaying lists of links. Made interactive with the dropdown JavaScript plugin.</p>
+// <p>This UI need to apply <a target="_blank" href="js/bootstrap-dropdown.js">bootstrap-dropdown.js</a></p>
+// ## Via data attributes
+// Add `data-toggle="dropdown"` to a link or button to toggle a dropdown.
+// ```
+// <div class="dropdown">
+//   <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown trigger</a>
+//   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+//     ...
+//   </ul>
+// </div>
+// ```
+// ## Via JavaScript
+// <div class="kss-markup">
+// Call the dropdown via JavaScript:
+// 	<pre class="prettyprint"><code data-language="html">
+//$('.dropdown-toggle').dropdown();
+// 	</code></pre>
+// </div>
+//
+// Styleguide 6
+@import "navbar";
+@import "dropdown";
+// Popover (Tooltips)
+//
+// Add small overlays of content, like those on the iPad, to any element for housing secondary information. <br>
+// Hover over elements to trigger the popover.<br>
+// This UI need to apply <a target="_blank" href="js/bootstrap-tooltip.js">bootstrap-tooltip.js</a> and <a target="_blank" href="js/bootstrap-popover.js">bootstrap-popover.js</a><br>
+// Popover Reference(http://getbootstrap.com/2.3.2/javascript.html#popovers)
+// ## Via JavaScript
+// <div class="kss-markup">
+// Enable popovers via JavaScript:
+// 	<pre class="prettyprint"><code data-language="html">
+// $('#example').popover(options)
+// 	</code></pre>
+// </div>
+//
+// Styleguide 7.
+@import "tooltip";
+// Tab
+//
+// Add quick, dynamic tab functionality to transition through panes of local content.<br>
+// This UI need to apply <a target="_blank" href="js/bootstrap-tab.js">bootstrap-tab.js</a><br>
+// Enable tabbable tabs via JavaScript (each tab needs to be activated individually):<br>
+// ## Via JavaScript
+// <div class="kss-markup">
+// 	<pre class="prettyprint"><code data-language="javascript">
+// $('#myTab a').click(function (e) {
+//   e.preventDefault();
+//   $(this).tab('show');
+// })
+// 	</code></pre>
+// </div>
+//
+// Styleguide 8.
+@import "tab";
+// Slider
+//
+// <p>Slider</p>
+//
+// Styleguide 9.
+@import "slider";
+// Password Strength
+//
+// <p>Password Strength</p>
+//
+// Styleguide 10.
+@import "password-strength";
+// Select
+//
+// <p>A UI refresh Select component with keyboard support and follow branding style.</p>
+// <p>This UI requires jQuery UI <a target="_blank" href="js/trend/jquery.ui.selectmenu.js">jQuery.UI.Selectmenu.js</a></p>
+// ## Via JavaScript
+// <div class="kss-markup">
+//  <pre class="prettyprint"><code data-language="javascript">
+// $('select').selectmenu();
+//  </code></pre>
+// </div>
+//
+// Styleguide 11.
+@import "select";
+// MU Window
+//
+// <p>MU relative Window elements will place here.</p>
+// ## Enable close button animation
+// <p>In order to enable close animation, you need to apply those snippets in your script tag: </p>
+// <div class="kss-markup">
+//  <pre class="prettyprint"><code data-language="javascript">
+//     $('.js-titlebar__close').on('mouseenter focus',function(e){
+//         if(e.type === 'focus'){$(this).addClass('is_focus');}
+//         $(this).removeClass('hide_circle').addClass('show_circle');
+//     }).on('mouseleave blur',function(e){
+//         if(e.type === 'blur'){$(this).removeClass('is_focus');}
+//         if(!$(this).hasClass('is_focus')){
+//             $(this).addClass('hide_circle').removeClass('show_circle');
+//         }
+//     });
+//  </code></pre>
+// </div>
+//
+// Styleguide 12.
+@import "mu";
+@import "titlebar";

@@ -1,0 +1,175 @@
+/**
+ *
+ * UI Component Styles: Select Menu
+ * CSS Stylesheet
+ *
+ * @requires jQuery UI Selectmenu plugin
+ *
+ * @skin Tyra
+ * @author Tina C Lin
+ * @created 2014/01/21
+ *
+ */
+
+/* In order to avoid class conflicts, add namespace:select,
+   please remember to add this class when calling selectmenu widget */
+
+// Select
+//
+//
+// Markup:
+// <select class="js_size_select search-condition__select p-4 select" aria-disabled="false">
+//     <option value="1048576">1 MB</option>
+//     <option value="10485760">10 MB</option>
+//     <option value="52428800">50 MB</option>
+//     <option value="104857600">100 MB</option>
+//     <option value="209715200">200 MB</option>
+//     <option value="524288000">500 MB</option>
+//     <option value="1048576000">1000 MB</option>
+// </select>
+//
+// Styleguide 11.1
+
+
+select {
+    width: 220px;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+    outline:none;
+    text-decoration:none;
+
+    span {
+        color: #555555;
+    }
+}
+
+.ui-widget-content {
+    border: 1px solid #aaaaaa;
+    background-color: #ffffff;
+    margin-top: -1px;
+
+    li a {
+        color: #555555;
+        outline:none;
+        text-decoration:none;
+        -webkit-box-shadow: none;
+    }
+}
+
+/* Interaction states
+----------------------------------*/
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #d3d3d3;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: #555555;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    background-color: #F7F7F7;
+}
+
+.ui-state-hover a, .ui-state-hover a:hover {
+    color: #ffffff;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background-color: #EEEEEE;
+
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #ffffff;
+}
+
+.ui-widget:active {
+    outline: none;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
+    opacity: 0.35;
+    background-image: none;
+}
+
+/* Select Menu
+---------------------------------- */
+.ui-selectmenu {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    padding: 5px 0;
+
+    //  Override style of a:hover, a:active in tyranium.content.scss
+    &.ui-state-hover, &.ui-state-active, &.ui-state-focus {
+        text-decoration:none;
+    }
+
+    > .ui-selectmenu-status {
+        padding: 0 25px 0 10px;
+    }
+
+    &.ui-state-active {
+        > .ui-selectmenu-icon {
+            -webkit-transform: rotate(180deg);
+        }
+    }
+
+    .ui-selectmenu-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 4px;
+        width: 25px;
+        background: url("@{pathForBrandingImage}/ic_dropdown_arrow.png") no-repeat center 0;
+    }
+}
+
+.ui-selectmenu-menu {
+    position: absolute;
+    top: 0;
+    display: none;
+    background-color: #ffffff;
+
+    &.ui-selectmenu-open {
+        display: block;
+    }
+
+    ul {
+        list-style:none;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+ul.ui-selectmenu-menu-dropdown {
+    margin-left: 0;
+    margin-bottom: 0;
+    > li {
+        margin: 5px;
+
+        > a {
+            white-space: nowrap;
+            padding: 5px 10px;
+            display: block;
+        }
+
+        &.ui-state-hover {
+            background-color: #ee5e64;
+
+            > a {
+                color: #ffffff;
+            }
+        }
+    }
+}

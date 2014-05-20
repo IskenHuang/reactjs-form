@@ -1,0 +1,27 @@
+{
+  "name": "trend-branding-styleguide",
+  "version": "0.2.0",
+  "main": "config.less",
+  "ignore": [
+    "**/.git*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "bootstrap-2": "bootstrap#2.3.1",
+    "jquery-1.8": "jquery#1.8",
+    "jquery-2": "jquery#2",
+    "bootstrap-3": "bootstrap#3",
+    "lesshat": "~2.0.15"
+  },
+  "devDependencies": {
+    "susy": "~2.1.1"
+  },
+  "_cacheHeaders": {
+    "Content-Type": "application/zip",
+    "Content-Disposition": "attachment; filename=\"trend-branding-styleguide-b72215dff0f8b090f583efaf0f8140df26258bc5.zip\""
+  },
+  "_source": "https://gitlab.tw.trendnet.org/randy_lien/trend-branding-styleguide/repository/archive.zip",
+  "_target": "*",
+  "_originalSource": "https://gitlab.tw.trendnet.org/randy_lien/trend-branding-styleguide/repository/archive.zip"
+}

@@ -1,0 +1,12 @@
+FED/app/components/
+FED/app/scripts/libraries/
+FED/app/scripts/ga.js
+FED/app/scripts/aes.js
+FED/dist/
+FED/node_modules/
+FED/test/
+BackEnd/src/Server/apidoc/
+BackEnd/src/Server/directpass/application/libraries/
+BackEnd/src/Server/directpass/static/js/_lib/
+QA/test/integration/node_modules/
+QA/test/api/node_modules/

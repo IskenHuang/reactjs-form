@@ -1,0 +1,28 @@
+{
+  "name": "trend-style-guide",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-compass": "~0.1.2",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-contrib-connect": "0.1.2",
+    "grunt-contrib-clean": "0.4.0",
+    "grunt-contrib-htmlmin": "0.1.1",
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-contrib-livereload": "0.1.1",
+    "grunt-usemin": "~0.1.9",
+    "grunt-contrib-compress": "~0.4.10",
+    "grunt-styleguide": "~0.2.5",
+    "grunt-regarde": "~0.1.1",
+    "less": "~1.7.0",
+    "grunt-contrib-less": "~0.11.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "matchdep": "~0.1.2",
+    "grunt-styleguide": "~0.2.6"
+  }
+}

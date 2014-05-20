@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Trend Micro Styleguide</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <!-- <script src="public/bootstrap-gh-pages/ui-bootstrap-tpls-0.4.0.min.js"></script> -->
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+    .trendmicro{
+        width: 625px;
+        height: 200px;
+        margin: 30px auto;
+        padding: 20px;
+        z-index: -1;
+        background-color:#fff;
+    }
+    .trendmicro .desc{
+        color:#f5f5f5;
+        text-shadow:1px 1px 0px #999;
+        position:absolute;
+        font-family: 'Oswald', Arial, sans-serif;
+        font-size:28px;
+        width:625px;
+        margin-top: -10px;
+        text-align:right;
+    }
+    .round {
+        margin: 0px;
+        border-radius:100px;
+        width:200px; height:200px;
+        border:0px solid #A90007;
+        /*background: #a31300;*/
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a00009), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #a00009 0%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
+        /*
+        background: -moz-linear-gradient(top, #a31300 0%, #b23718 38%, #d14c2b 53%, #f2b7b0 75%, #f4cdc8 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a31300), color-stop(38%,#b23718), color-stop(53%,#d14c2b), color-stop(75%,#f2b7b0), color-stop(100%,#f4cdc8));
+        background: -webkit-linear-gradient(top, #a31300 0%,#b23718 38%,#d14c2b 53%,#f2b7b0 75%,#f4cdc8 100%);
+        background: -ms-linear-gradient(top, #a31300 0%,#b23718 38%,#d14c2b 53%,#f2b7b0 75%,#f4cdc8 100%);
+        background: linear-gradient(top, #a31300 0%,#b23718 38%,#d14c2b 53%,#f2b7b0 75%,#f4cdc8 100%);
+        */
+        float:left;
+    }
+    .gloss {
+        width: 153px;
+        height: 153px;
+        -webkit-transform: scale(0.9, 0.65);
+        border-radius: 200px;
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0.45) 40%,rgba(255, 255, 255, 0) 62%);
+        position: absolute;
+        margin: -26px 0 0 24px;
+        z-index: 1;
+    }
+    .hook-outer{
+        -webkit-transform:rotate(142deg);
+        width:200px;
+        height:200px;
+    }
+    .hook{
+        width:200px;
+        height:200px;
+        border-radius:100px;
+        -webkit-transform: scale(1, 0.54);
+        position:absolute;
+        background-color:#fff;
+    }
+    .hook-s{
+        width: 173px;
+        height: 180px;
+        border-radius: 95px 109px 93px 108px;
+        -webkit-transform: scale(1, 0.52);
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,red), color-stop(100%,#A00009));
+        background: -webkit-linear-gradient(-142deg, red 0%,#A00009 100%);
+        position: absolute;
+        margin-top: 19px;
+        margin-left: 14px;
+    }
+    .t{
+        font-family: Times New Roman;
+        color: white;
+        font-size: 122px;
+        margin: -167px 0 0 21px;
+        position: absolute;
+        -webkit-transform: scale(1.4, 1);
+        font-style: italic;
+        font-weight: bold;
+        width: 71px;
+        height: 69px;
+        overflow: hidden;
+    }
+    .t2 {
+        font-family: Times New Roman;
+        color: white;
+        font-size: 190px;
+        margin: -98px 0 0 9px;
+        position: absolute;
+        font-style: italic;
+        width: 42px;
+        height: 86px;
+        overflow: hidden;
+        line-height: 4px;
+        font-weight: bold;
+        -webkit-transform: rotate(-4deg);
+    }
+    .gloss-bottom{
+        width: 200px;
+        height: 200px;
+        background: -webkit-linear-gradient(top,rgba(255, 255, 255, 0) 50%,rgba(243, 212, 165, 0.8) 100%);
+        position: absolute;
+        margin: -200px 0 0 0;
+        border-bottom-right-radius: 380px 370px;
+        border-bottom-left-radius: 380px 370px;
+        z-index: 1;
+    }
+
+    .wording-trend {
+        font-size: 97px;
+        font-weight: bold;
+        float:left;
+        margin: 19px 0px 0px 28px;
+        letter-spacing: 7px;
+    }
+    .wording-micro {
+        font-size: 53px;
+        font-weight: bold;
+
+        margin: 0px 0px 0px 35px;
+        line-height: 24px;
+        letter-spacing: 42px;
+    }
+    .trademark{
+        float: left;
+        font-size: 29px;
+        margin: -55px 0 0 372px;
+    }
+
+    .round-shadow{
+        width: 148px;
+        height: 42px;
+        border-radius: 200px;
+        -webkit-transform: scale(1, 0.58);
+        background-color: transparent;
+        position: absolute;
+        box-shadow: 8px 165px 70px #666;
+        margin-top: 74px;
+        margin-left: 20px;
+        z-index: 0;
+    }
+
+    /****************************************************************
+        Size: 32 * 32px
+    ****************************************************************/
+    .trendmicro.size32 {
+        width: 120px;
+        height: 35px;
+        padding: 5px;
+    }
+    .trendmicro.size32 .desc{
+        font-size: 9px;
+        width:110px;
+        margin:-7px 0 0 3px;
+    }
+    .trendmicro.size32 .round {
+        border-radius:32px;
+        width:32px;
+        height:32px;
+    }
+    .trendmicro.size32 .gloss {
+        width: 24px;
+        height: 24px;
+        border-radius: 16px;
+        margin: -4px 0 0 4px;
+    }
+    .trendmicro.size32 .hook-outer{
+        width:32px;
+        height:32px;
+    }
+    .trendmicro.size32 .hook{
+        width:32px;
+        height:32px;
+        border-radius:32px;
+    }
+    .trendmicro.size32 .hook-s{
+        width: 28px;
+        height: 29px;
+        border-radius: 15px 18px 15px 18px;
+        margin-top: 3px;
+        margin-left: 2.3px;
+    }
+    .trendmicro.size32 .t{
+        font-size: 19px;
+        margin: -27px 0 0 3.5px;
+        width: 7.5px;
+        height: 10.5px;
+    }
+    .trendmicro.size32 .t2 {
+        font-size: 31.5px;
+        margin: -17.5px 0 0 1.5px;
+        width: 7px;
+        height: 17px;
+        line-height: 2px;
+    }
+    .trendmicro.size32 .gloss-bottom{
+        width: 32px;
+        height: 32px;
+        margin: -32px 0 0 0;
+        border-bottom-right-radius: 63px 62px;
+        border-bottom-left-radius: 63px 62px;
+    }
+    .trendmicro.size32 .wording-trend {
+        font-size: 16px;
+        margin: 2.5px 0px 0px 4.5px;
+        letter-spacing: 1px;
+    }
+    .trendmicro.size32 .wording-micro {
+        font-size: 12px;
+        margin: 0px 0px 0px 6px;
+        line-height: 3.5px;
+        letter-spacing: 4.7px;
+    }
+    .trendmicro.size32 .trademark{
+        font-size: 10%;
+        margin: -9px 0 0 62px;
+    }
+
+    .trendmicro.size32 .round-shadow{
+        width: 25px;
+        height: 6px;
+        border-radius: 22px;
+        box-shadow: 1px 26px 14px #666;
+        margin-top: 11px;
+        margin-left: 3px;
+    }
+
+    /****************************************************************
+        Size: 64 * 64px
+    ****************************************************************/
+    .trendmicro.size64 {
+        width: 210px;
+        height: 70px;
+        padding: 10px;
+    }
+    .trendmicro.size64 .desc{
+        width:202px;
+        margin:-7px 0 0 3px;
+        font-size: 12px;
+    }
+    .trendmicro.size64 .round {
+        border-radius:64px;
+        width:64px;
+        height:64px;
+    }
+    .trendmicro.size64 .gloss {
+        width: 48px;
+        height: 48px;
+        border-radius: 64px;
+        margin: -8px 0 0 8px;
+    }
+    .trendmicro.size64 .hook-outer{
+        width:64px;
+        height:64px;
+    }
+    .trendmicro.size64 .hook{
+        width:64px;
+        height:64px;
+        border-radius:32px;
+    }
+    .trendmicro.size64 .hook-s{
+        width: 55px;
+        height: 58px;
+        border-radius: 30px 36px 30px 36px;
+        margin-top: 6px;
+        margin-left: 4.5px;
+    }
+    .trendmicro.size64 .t{
+        font-size: 38px;
+        margin: -54px 0 0 7px;
+        width: 15px;
+        height: 21px;
+    }
+    .trendmicro.size64 .t2 {
+        font-size: 63px;
+        margin: -33px 0 0 3px;
+        width: 14px;
+        height: 28px;
+        line-height: 4px;
+    }
+    .trendmicro.size64 .gloss-bottom{
+        width: 64px;
+        height: 64px;
+        margin: -64px 0 0 0;
+        border-bottom-right-radius: 126px 123px;
+        border-bottom-left-radius: 127px 123px;
+    }
+    .trendmicro.size64 .wording-trend {
+        font-size: 32px;
+        margin: 5px 0px 0px 9px;
+        letter-spacing: 2px;
+    }
+    .trendmicro.size64 .wording-micro {
+        font-size: 18px;
+        margin: 0px 0px 0px 12px;
+        line-height: 7px;
+        letter-spacing: 13px;
+    }
+    .trendmicro.size64 .trademark{
+        font-size: 10px;
+        margin: -18px 0 0 124px;
+    }
+
+    .trendmicro.size64 .round-shadow{
+        width: 50px;
+        height: 12px;
+        border-radius: 43px;
+        box-shadow: 2px 52px 28px #666;
+        margin-top: 22px;
+        margin-left: 6px;
+    }
+
+    /****************************************************************
+        Size: 128 * 128px
+    ****************************************************************/
+    .trendmicro.size128 {
+        width: 404px;
+        height: 140px;
+        padding: 20px;
+    }
+    .trendmicro.size128 .desc{
+        font-size: 17px;
+        width:404px;
+        margin:-7px 0 0 3px;
+    }
+    .trendmicro.size128 .round {
+        border-radius:128px;
+        width:128px;
+        height:128px;
+    }
+    .trendmicro.size128 .gloss {
+        width: 96px;
+        height: 96px;
+        border-radius: 128px;
+        margin: -16px 0 0 16px;
+    }
+    .trendmicro.size128 .hook-outer{
+        width:128px;
+        height:128px;
+    }
+    .trendmicro.size128 .hook{
+        width:128px;
+        height:128px;
+        border-radius:64px;
+    }
+    .trendmicro.size128 .hook-s{
+        width: 110px;
+        height: 116px;
+        border-radius: 60px 72px 60px 72px;
+        margin-top: 12px;
+        margin-left: 9px;
+    }
+    .trendmicro.size128 .t{
+        font-size: 72px;
+        margin: -112px 0 0 12px;
+        width: 30px;
+        height: 51px;
+    }
+    .trendmicro.size128 .t2 {
+        font-size: 126px;
+        margin: -66px 0 0 6px;
+        width: 28px;
+        height: 56px;
+        line-height: 8px;
+    }
+    .trendmicro.size128 .gloss-bottom{
+        width: 128px;
+        height: 128px;
+        margin: -128px 0 0 0;
+        border-bottom-right-radius: 252px 246px;
+        border-bottom-left-radius: 254px 246px;
+    }
+    .trendmicro.size128 .wording-trend {
+        font-size: 64px;
+        margin: 10px 0px 0px 18px;
+        letter-spacing: 4px;
+    }
+    .trendmicro.size128 .wording-micro {
+        font-size: 36px;
+        margin: 0px 0px 0px 24px;
+        line-height: 14px;
+        letter-spacing: 26px;
+    }
+    .trendmicro.size128 .trademark{
+        font-size: 20px;
+        margin: -36px 0 0 248px;
+    }
+
+    .trendmicro.size128 .round-shadow{
+        width: 100px;
+        height: 24px;
+        border-radius: 86px;
+        box-shadow: 4px 104px 56px #666;
+        margin-top: 44px;
+        margin-left: 12px;
+    }
+
+
+    </style>
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar kss-fixed">
+        <header class="kss-header">
+          <h1 class="kss-doc-title"><a href="./index.html">Trend Micro Styleguide</a></h1>
+        </header>
+        <nav class="kss-nav">
+          <ul class="kss-menu" data-kss-ref="4">
+            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Typography</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Buttons</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Forms</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Header &amp; Footer</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Modals</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Dropdown</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Popover (Tooltips)</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Tab</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-9.html"><span class="kss-ref">9</span><span class="kss-name">Slider</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-10.html"><span class="kss-ref">10</span><span class="kss-name">Password Strength</span></a></li>
+            
+            <li class="kss-menu-item"><a href="section-11.html"><span class="kss-ref">11</span><span class="kss-name">Select</span></a></li>
+            
+          </ul>
+          
+          <ul class="kss-menu-child">
+            
+            
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-4.1"><span class="kss-ref">4.1</span><span class="kss-name">Header</span></a></li>
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-4.1"><span class="kss-ref">4.1</span><span class="kss-name">Header (After sign in)</span></a></li>
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-4.2"><span class="kss-ref">4.2</span><span class="kss-name">Navigator footer</span></a></li>
+            
+            
+            
+            <li class="kss-menu-item"><a href="#section-4.3"><span class="kss-ref">4.3</span><span class="kss-name">Trend Micro Footer</span></a></li>
+            
+            
+          </ul>
+          
+        </nav>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          
+          <section id="section-4" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">4</span> Header &amp; Footer</h1>
+            
+            
+            <div class="kss-description">
+              <p>Here will contain most of the header, footer, landing page layout and relative basic elements.</p>
+<p>All of Trend Micro products should contain this elements on the UI.</p>
+            </div>
+            
+            
+          </section>
+          
+          <section id="section-4.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">4.1</span> Header</h1>
+            
+            
+            <div class="kss-description">
+              <p>A standard Trend Micro branding header.
+If you want to stick your footer on bootom, you might need to use .wrapper class in your HTML markup.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-markup">
+                <h5>HTML markup</h5>
+                <pre class="prettyprint"><code data-language="html">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;trend-header&quot;&gt;
+    &lt;div class=&quot;trend-header-wrapper navbar clearfix container&quot;&gt;
+        &lt;h1 class=&quot;product-name pull-left&quot;&gt;
+            &lt;img src=&quot;img/trend/ic_logo_productsymbol.png&quot; alt=&quot;&quot; class=&quot;logo&quot;&gt;
+            &lt;img src=&quot;img/trend/ic_logo_productname.png&quot; alt=&quot;DirectPass&quot; class=&quot;product-name&quot;&gt;
+        &lt;/h1&gt;
+        &lt;ul class=&quot;nav pull-right&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; data-i18n=&quot;herder_get_pro_subscription&quot;&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; data-i18n=&quot;herder_get_help&quot;&gt;Get Help&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;btn btn-ruby btn-small&quot;&gt;Sign In&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">normal</div>
+                  <div class="kss-modifier-description">
+                    Original status
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="wrapper">
+<div class="trend-header">
+    <div class="trend-header-wrapper navbar clearfix container">
+        <h1 class="product-name pull-left">
+            <img src="img/trend/ic_logo_productsymbol.png" alt="" class="logo">
+            <img src="img/trend/ic_logo_productname.png" alt="DirectPass" class="product-name">
+        </h1>
+        <ul class="nav pull-right">
+            <li>
+                <a href="#" data-i18n="herder_get_pro_subscription"></a>
+            </li>
+            <li>
+                <a href="#" data-i18n="herder_get_help">Get Help</a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-ruby btn-small">Sign In</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </section>
+          
+          <section id="section-4.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">4.1</span> Header (After sign in)</h1>
+            
+            
+            <div class="kss-description">
+              <p>Original button should be replace by a dropdown menu to show user&apos;s information like subscription, link to Trend Micro Account or Sign out functionality.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-markup">
+                <h5>HTML markup</h5>
+                <pre class="prettyprint"><code data-language="html">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;div class=&quot;trend-header&quot;&gt;
+    &lt;div class=&quot;trend-header-wrapper navbar clearfix container&quot;&gt;
+        &lt;h1 class=&quot;product-name pull-left&quot;&gt;
+            &lt;img src=&quot;img/trend/ic_logo_productsymbol.png&quot; alt=&quot;&quot; class=&quot;logo&quot;&gt;
+            &lt;img src=&quot;img/trend/ic_logo_productname.png&quot; alt=&quot;DirectPass&quot; class=&quot;product-name&quot;&gt;
+        &lt;/h1&gt;
+        &lt;ul class=&quot;nav pull-right&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; data-i18n=&quot;herder_get_pro_subscription&quot;&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; data-i18n=&quot;herder_get_help&quot;&gt;Get Help&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li id=&quot;header-user&quot; class=&quot;dropdown header-user&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle expand-down&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot; id=&quot;userMenuHeader&quot;&gt;John Dove&lt;/a&gt;
+                &lt;ul id=&quot;userMenu&quot; class=&quot;dropdown-menu pull-right&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;
+                            &lt;span data-js=&quot;menu-content&quot; data-i18n=&quot;menu_item_expires_on&quot;&gt;Expires on&lt;/span&gt;&lt;span&gt;&nbsp;&nbsp;03/23/2014&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a data-js=&quot;menu-link&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+                            &lt;span data-js=&quot;menu-content&quot; data-i18n=&quot;menu_item_renew_now&quot;&gt;Renew now&lt;/span&gt;&lt;span&gt;&nbsp;&nbsp;&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a data-js=&quot;menu-link&quot; href=&quot;#setting&quot;&gt;
+                            &lt;span data-js=&quot;menu-content&quot; data-i18n=&quot;menu_item_settings&quot;&gt;Settings&lt;/span&gt;&lt;span&gt;&nbsp;&nbsp;&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a data-js=&quot;menu-link&quot; href=&quot;https://account.trendmicro.com/my_account&quot; target=&quot;_blank&quot;&gt;
+                            &lt;span data-js=&quot;menu-content&quot; data-i18n=&quot;menu_item_tm_account&quot;&gt;Trend Micro Account&lt;/span&gt;&lt;span&gt;&nbsp;&nbsp;&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a data-js=&quot;menu-link&quot; href=&quot;/auth/logout&quot;&gt;
+                            &lt;span data-js=&quot;menu-content&quot; data-i18n=&quot;menu_item_sign_out&quot;&gt;Sign Out&lt;/span&gt;&lt;span&gt;&nbsp;&nbsp;&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">normal</div>
+                  <div class="kss-modifier-description">
+                    Original status
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="wrapper">
+<div class="trend-header">
+    <div class="trend-header-wrapper navbar clearfix container">
+        <h1 class="product-name pull-left">
+            <img src="img/trend/ic_logo_productsymbol.png" alt="" class="logo">
+            <img src="img/trend/ic_logo_productname.png" alt="DirectPass" class="product-name">
+        </h1>
+        <ul class="nav pull-right">
+            <li>
+                <a href="#" data-i18n="herder_get_pro_subscription"></a>
+            </li>
+            <li>
+                <a href="#" data-i18n="herder_get_help">Get Help</a>
+            </li>
+            <li id="header-user" class="dropdown header-user">
+                <a class="dropdown-toggle expand-down" data-toggle="dropdown" href="#" id="userMenuHeader">John Dove</a>
+                <ul id="userMenu" class="dropdown-menu pull-right">
+                    <li>
+                        <a href="#">
+                            <span data-js="menu-content" data-i18n="menu_item_expires_on">Expires on</span><span>&nbsp;&nbsp;03/23/2014</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-js="menu-link" href="#" target="_blank">
+                            <span data-js="menu-content" data-i18n="menu_item_renew_now">Renew now</span><span>&nbsp;&nbsp;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-js="menu-link" href="#setting">
+                            <span data-js="menu-content" data-i18n="menu_item_settings">Settings</span><span>&nbsp;&nbsp;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-js="menu-link" href="https://account.trendmicro.com/my_account" target="_blank">
+                            <span data-js="menu-content" data-i18n="menu_item_tm_account">Trend Micro Account</span><span>&nbsp;&nbsp;</span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a data-js="menu-link" href="/auth/logout">
+                            <span data-js="menu-content" data-i18n="menu_item_sign_out">Sign Out</span><span>&nbsp;&nbsp;</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </section>
+          
+          <section id="section-4.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">4.2</span> Navigator footer</h1>
+            
+            
+            <div class="kss-description">
+              <p>A standard company sitemap footer.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-markup">
+                <h5>HTML markup</h5>
+                <pre class="prettyprint"><code data-language="html">&lt;div class=&quot;navigator-footer layout-home&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;span5&quot;&gt;
+        &lt;p class=&quot;navigator-footer-title&quot;&gt;
+          Security Software Products
+        &lt;/p&gt;
+        &lt;ul class=&quot;navigator-footer-items&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lorem ipsum sit dolor commodo&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;dolor ut nostrud consectetur fugiat&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;reprehenderit velit consectetur aute&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;proident nostrud sint quis aliqua dolore commodo laboris.&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lorem ipsum sit dolor commodo&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;dolor ut nostrud consectetur fugiat&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;reprehenderit velit consectetur aute&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;proident nostrud sint quis aliqua dolore commodo laboris.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;span5&quot;&gt;
+        &lt;p class=&quot;navigator-footer-title&quot;&gt;
+          Security Software Products
+        &lt;/p&gt;
+        &lt;ul class=&quot;navigator-footer-items&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lorem ipsum sit dolor commodo&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;dolor ut nostrud consectetur fugiat&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;reprehenderit velit consectetur aute&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;proident nostrud sint quis aliqua dolore commodo laboris.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">normal</div>
+                  <div class="kss-modifier-description">
+                    Original status
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="navigator-footer layout-home">
+  <div class="container">
+    <div class="row">
+      <div class="span5">
+        <p class="navigator-footer-title">
+          Security Software Products
+        </p>
+        <ul class="navigator-footer-items">
+          <li><a href="#">Lorem ipsum sit dolor commodo</a></li>
+          <li><a href="#">dolor ut nostrud consectetur fugiat</a></li>
+          <li><a href="#">reprehenderit velit consectetur aute</a></li>
+          <li><a href="#">proident nostrud sint quis aliqua dolore commodo laboris.</a></li>
+          <li><a href="#">Lorem ipsum sit dolor commodo</a></li>
+          <li><a href="#">dolor ut nostrud consectetur fugiat</a></li>
+          <li><a href="#">reprehenderit velit consectetur aute</a></li>
+          <li><a href="#">proident nostrud sint quis aliqua dolore commodo laboris.</a></li>
+        </ul>
+      </div>
+      <div class="span5">
+        <p class="navigator-footer-title">
+          Security Software Products
+        </p>
+        <ul class="navigator-footer-items">
+          <li><a href="#">Lorem ipsum sit dolor commodo</a></li>
+          <li><a href="#">dolor ut nostrud consectetur fugiat</a></li>
+          <li><a href="#">reprehenderit velit consectetur aute</a></li>
+          <li><a href="#">proident nostrud sint quis aliqua dolore commodo laboris.</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </section>
+          
+          <section id="section-4.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">4.3</span> Trend Micro Footer</h1>
+            
+            
+            <div class="kss-description">
+              <p>A standard Trend Micro branding footer style.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-markup">
+                <h5>HTML markup</h5>
+                <pre class="prettyprint"><code data-language="html">&lt;footer class=&quot;trend-footer&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row-fluid footer-wrapper&quot;&gt;
+            &lt;div class=&quot;footer-links&quot;&gt;
+                &lt;div class=&quot;language dropup&quot;&gt;
+                    &lt;a class=&quot;expand dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+                        English
+                    &lt;/a&gt;
+                    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Chinese&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;English&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Japanese&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Privacy Policy&lt;/a&gt;
+                &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;Contact Us&lt;/a&gt;
+                &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;TrendMicro.com&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;copyright&quot; data-i18n=&quot;copyright&quot;&gt;&lt;/div&gt;
+            &lt;img src=&quot;img/trend/ic_tmlogo_web.png&quot; class=&quot;tm-logo&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">normal</div>
+                  <div class="kss-modifier-description">
+                    Original status
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <footer class="trend-footer">
+    <div class="container">
+        <div class="row-fluid footer-wrapper">
+            <div class="footer-links">
+                <div class="language dropup">
+                    <a class="expand dropdown-toggle" data-toggle="dropdown" href="#">
+                        English
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Chinese</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Japanese</a></li>
+                    </ul>
+                </div>
+                <a class="link" href="#">Privacy Policy</a>
+                <a class="link" href="#">Contact Us</a>
+                <a class="link" href="#">TrendMicro.com</a>
+            </div>
+            <div class="copyright" data-i18n="copyright"></div>
+            <img src="img/trend/ic_tmlogo_web.png" class="tm-logo">
+        </div>
+    </div>
+</footer>
+                </div>
+              </div>
+              
+            </div>
+            
+          </section>
+          
+          
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="//github.com/hughsk/kss-node">kss-node</a> and <a href="//github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap-affix.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/affix.js"></script>
+    <script src="js/alert.js"></script>
+    <script src="js/button.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/scrollspy.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/popover.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/typeahead.js"></script>
+    <script src="js/trend/jquery-ui-1.10.1.custom.min.js"></script>
+    <script src="js/trend/jquery.ui.selectmenu.js"></script>
+    <script>
+        $(function() {
+
+            $('select').selectmenu();
+
+            $('.js-titlebar__close').on('mouseenter focus',function(e){
+                if(e.type === 'focus'){$(this).addClass('is_focus');}
+                $(this).removeClass('hide_circle').addClass('show_circle');
+            }).on('mouseleave blur',function(e){
+                if(e.type === 'blur'){$(this).removeClass('is_focus');}
+                if(!$(this).hasClass('is_focus')){
+                    $(this).addClass('hide_circle').removeClass('show_circle');
+                }
+            });
+        });
+    </script>
+    <!--[if gt IE 8]><!-->
+    <!-- <script src="public/rainbow.min.js"></script> -->
+    <!--<![endif]-->
+    <script src="public/prettify.js"></script>
+    <script src="public/main.js"></script>
+  </body>
+</html>
