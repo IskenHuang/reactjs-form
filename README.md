@@ -1,8 +1,7 @@
-# DPLocksmith
-Library in dist folder. You can find 'DPLocksmith.js' and 'DPLocksmith.min.js'(minify).
+# Reactjs-form
 
 # prepare project
-clone project from gitlab `git clone git@gitlab.tw.trendnet.org:isken_huang/dplocksmith.git`
+clone project from gitlab `git clone git@gitlab.tw.trendnet.org:isken_huang/reactjs-form.git`
 install package `npm install`
 
 # build
